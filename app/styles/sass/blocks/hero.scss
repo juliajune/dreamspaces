@@ -1,0 +1,288 @@
+/* --- HERO SECTION --- */
+.hero__header{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.hero__title{
+    margin-bottom: 20px;
+}
+
+
+.hero-slider{
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+    .hero-slider{
+        display: block;
+        width: 71%;
+        height: 560px;
+        margin-left: auto;
+        margin-right: 0;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    .hero__form{
+        width: 50%;
+    }
+
+    .hero__content{
+        position: relative;
+        z-index: 1;
+        
+    }
+    .hero__inner{
+        position: absolute;   
+        padding: 40px 0px;
+        top: 0;
+        left: 0;
+        width: 100%;       
+        z-index: 10;    
+    }
+}
+
+@media screen and (min-width: 992px){
+    .hero__header{
+        flex-direction: row;
+    }
+    .hero__title{
+        flex-basis: 60%;
+    }
+    .hero__description{        
+        padding-left: 60px;
+        flex-basis: 40%;
+    }
+    .hero__form{
+        width: 40%;
+    }
+}
+
+
+
+.hero__inner {
+    
+}
+/*
+.hero-slider{
+    width: 100%;
+    height: 560px;
+    overflow: hidden;    
+}
+*/
+@media screen and (min-width: 1024px){
+    /*
+    .hero__inner{
+        margin: 65px 0  75px 0;       
+    }
+    */
+    /*
+    .hero-slider{
+        width: 71%;
+        height: 560px;
+        margin-left: auto;
+        margin-right: 0;
+    }*/
+}
+
+/* --- HERO SECTION --- */
+
+/* ---  FORM --- */
+form{
+    padding: 30px 20px;
+    background-color: var(--color-primary);
+}
+
+.form__title{
+    font-family: var(--font-text);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 33px; 
+    color: var(--color-white); 
+    margin-bottom: 30px;  
+    text-align: center;
+}
+
+.form__select{
+    margin-bottom: 30px;
+}
+
+.form__button{
+    width: 100%;
+}
+
+
+
+@media screen and (min-width: 1200px){
+    form{
+        padding: 42px 40px 32px 40px;
+    }
+
+    .form__title{
+        font-size: 34px;
+        line-height: 44px; 
+        text-align: left;       
+    }
+
+    .form__select{
+        margin-bottom: 17px;
+    }
+    
+}
+
+/* ---  /FORM --- */
+
+.swiper-slide__bg{
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+
+/*--- SELECT ---*/
+.select{
+    position: relative;
+}
+.select__button{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 34px 75px 8px 16px;
+    background-color: var(--color-primary-dark);
+    border: 1px solid var(--color-primary-dark);    
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: var(--color-white);   
+}
+.select__button:hover{
+    cursor: pointer;
+}
+.select__button:after{
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 22px;
+    z-index: 99;
+    pointer-events: none;
+    border: solid var(--color-white);
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    transform: rotate(45deg) translateX(-50%);
+}
+.select__button_active:after{
+    transform: rotate(-135deg);
+    transform-origin: 3px;
+}
+
+.select__placeholder{
+    color: var(--color-gray-light); 
+    background-color: transparent;  
+    font-family: var(--font-main); 
+    position: absolute;  
+    top: 8px;
+    left: 16px;  
+    z-index: 2;
+}
+
+.select__list{
+    border: 1px solid var(--color-primary-dark);
+    overflow: hidden;
+    position: absolute;
+    top: 75px;
+    left: 0px;
+    width: 100%;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: rotateX(-90deg);
+    transition: var(--transition-time);
+    border-radius: 4px;
+    box-shadow: 0 2px 3px hsl(0deg 0% 4% / 10%), 0 0 0 1px hsl(0deg 0% 4% / 10%);
+    
+}
+.select__list_visible{
+    visibility: visible;
+    opacity: 1;
+    transform: rotateX(0deg);
+    transition: var(--transition-time);
+}
+.select__item{
+    padding: 8px 16px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    transition: var(--transition-time);
+    font-weight: 500;
+}
+
+.select__item:hover{
+    cursor: pointer;
+    background-color: var(--color-gray-lighter);
+    color: var(--color-secondary-light);
+    transition: var(--transition-time);
+}
+
+
+/*--- /SELECT ---*/
+
+/*--- DATAPIC ---*/
+.datapic{
+    position: relative;
+}
+.datapic:after{
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 22px;
+    z-index: 99;
+    border: solid var(--color-white);
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    transform: rotate(45deg) translateX(-50%);
+}
+.datapic:hover{
+    cursor: pointer;
+}
+.datapic_active:after{
+    transform: rotate(-135deg);
+    transform-origin: 3px;
+}
+.datapic__placeholder{
+    color: var(--color-gray-light); 
+    background-color: transparent;  
+    font-family: var(--font-main); 
+    position: absolute;  
+    top: 8px;
+    left: 16px;  
+    z-index: 2;
+}
+.datapic__input{
+    display: block;
+    width: 100%;
+    padding: 34px 75px 8px 16px;
+    background-color: var(--color-primary-dark);
+    border: 1px solid var(--color-primary-dark);    
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: var(--color-white); 
+}
+
+/*Отмена стилей календаря*/
+
+.datepicker-input.in-edit:active, .datepicker-input.in-edit:focus {
+    box-shadow: none; /*Снимаем віделение при фокусе*/
+}
+
+.datepicker-input.in-edit {
+   border-color: transparent; /*Снимаем віделение при фокусе*/
+}
+
+.datepicker-header .datepicker-controls .button[disabled] {
+  color: #e8e8e8; /*Меняем цвет некликабельной кнопки-листалки месяцев*/
+}
+/*--- /DATAPIC ---*/

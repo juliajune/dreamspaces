@@ -1,0 +1,244 @@
+/*--- SPACES ---*/
+.spaces{}
+
+.spaces__header{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width: 992px){
+    .spaces__header{
+        flex-direction: row;
+    }
+}/* /media */
+.spaces__title{
+    margin-bottom: 15px;
+}
+@media screen and (min-width: 992px){
+    .spaces__title{
+        flex-basis: 33.33%;
+        margin-bottom: 0px;
+        margin-right: 15px;        
+    }
+}/* /media */
+
+.spaces__description{
+    margin-bottom: 30px;
+}
+@media screen and (min-width: 992px){
+    .spaces__description{
+        margin: 0 100px 0 0;
+        flex-basis: 40%;
+    }
+}/* /media */
+
+.spaces-slider{
+    position: relative;
+    overflow: hidden;
+    height: 320px;
+}
+
+@media screen and (min-width: 1024px){
+    .spaces-slider{
+        height: 465px;
+    }
+}
+
+.spaces-slider .swiper-slide{
+    height: 100%;
+}
+
+
+/*--- /SPACES ---*/
+
+/*--- SINGLE SPACE ---*/
+.space{
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.7s;
+}
+
+@media screen and (min-width: 1024px){
+    /* simple space card background. Enable default*/
+    .space::before{
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--color-primary);
+        opacity: 0;
+        transition: 1.5s 0.7s;
+        z-index: 2;               
+    }
+
+    /* simple space card background. Disable when card hover*/
+    .space:hover::before{
+        opacity: 1;
+        transition: 0.7s;
+    }
+    
+    /* simple space background image. Enable default*/
+    .space::after{
+        content: url("../../images/space-bg.svg");
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        opacity: 0;
+        transition: 1.5s 0.7s;
+        z-index: 85;   
+    }
+
+    /* simple space background image. Disable when card hover*/
+    .space:hover::after{
+        opacity: 0.2;
+        transition: var(--transition-time-longer);
+    }
+}/*media*/
+
+.space__preview{
+    display: block;
+    height: 250px;      
+}
+@media screen and (min-width: 1024px){
+    /*Preview image wrapper */
+    .space__preview{
+        height: 420px;      
+    }
+}/*-- /media --*/
+
+.space__preview img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;   
+}
+
+
+.space__body{
+    font-family: var(--font-main);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    color: var(--color-black);
+    padding: 15px;
+    background-color: var(--color-white);
+    text-transform: capitalize;
+
+}
+
+.space__info{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;	
+    padding: 145px 55px 30px 55px;
+    z-index: 5;
+    text-align: center;
+    color: var(--color-white);     
+}
+/* simple space info title. Enable default*/
+.space__info-title{   
+    font-family: var(--font-text);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 41px;
+    text-align: center;
+    margin-bottom: 14px;
+    text-transform: capitalize;   
+    color: var(--color-white); 
+    transition: 1.5s;
+    opacity: 0; 
+}
+
+ /* simple space info text. Enable default*/
+.space__info-text{    
+    font-family: var(--font-main);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center; 
+    color: var(--color-white); 
+    transition: 1.5s;
+    opacity: 0;   
+}
+
+@media screen and (min-width: 1024px){
+    /* simple space info. Disable title ant text when card hover */
+    .space:hover .space__info{
+        display: block;        
+    }
+    .space:hover .space__info .space__info-title{
+        transition: 1.5s;
+        opacity: 1; 
+    }
+    .space:hover .space__info .space__info-text{
+        transition: 1.5s;
+        opacity: 1;      
+    }
+}
+
+
+
+.space__badge{
+    display: none;
+    position: absolute;
+    left: 0px;
+    bottom: 45px;
+    z-index: 99;
+    transition: 0.7s 0.5s;
+}
+
+/* orange button*/
+.info-badge{   
+    display: inline-block;
+    background-color: var(--color-secondary-light);
+    padding: 25px 75px 25px 25px;
+    text-align: center;
+    color: var(--color-white);  
+    font-family: var(--font-main);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;    
+    position: relative;    
+    transform: translateX(-70%);  
+    transition:  0.7s; 
+}
+/* orange button arrow */
+.info-badge:after{
+    content: "";
+    display: block;
+    position: absolute;
+    border: solid var(--color-white);
+    border-width: 0 2px 2px 0;
+    padding: 5px;   
+    z-index: 5;
+    top: 50%; 
+    transform: rotate(-45deg) translateY(-50%);
+    right: 28px;
+}
+@media screen and (min-width: 1024px){
+    .space__badge{
+       display: block;
+    }   
+    /* orange button wrapper hover effect*/
+    .space:hover .space__badge{
+        bottom: 0px;
+        transition: var(--transition-time);
+     }
+    /* orange button hover effect*/
+    .space:hover .space__badge .info-badge{
+        transform: translateX(0%);
+        transition: 0.5s 0.7s;
+    }
+}
+
+   
