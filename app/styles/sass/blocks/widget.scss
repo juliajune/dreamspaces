@@ -1,0 +1,31 @@
+/*--- WIDGET ---*/
+.widget{
+    &__title{
+        font-family: var(--font-main);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        color: var(--color-gray-light);
+        margin-bottom: 24px;
+    }
+
+    &__text{
+        color: var(--color-gray-light);
+    }
+    &__menu-item{
+        font-family: var(--font-main);
+        font-size: 16px;    
+        line-height: 26px; 
+        margin-bottom: 9px;   
+    }
+    &__menu-link{
+        display: inline-block;
+        border-bottom: 1px solid transparent;
+        transition: var(--transition-time);
+    }
+    &__menu-link:hover{
+        border-color: var(--color-white);
+        transition: var(--transition-time);
+    }
+}
+/*--- /WIDGET ---*/

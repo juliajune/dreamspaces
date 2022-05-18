@@ -1,0 +1,36 @@
+/*--- MEMBER SECTION---*/
+.member{
+    padding: 30px 0;
+    @media screen and (min-width: 746px){
+        background-color: var(--color-primary);
+        background-image:  url(../images/dist/smile-man.png), url(../images/dist/smile-man-bg.png);
+        background-repeat: no-repeat, no-repeat;
+        background-position: 80%  bottom,  80% -100%;
+        padding: 70px 0px 80px 0px;
+    }
+
+    &__intro{
+        margin-bottom: 8px;
+    }
+    
+    &__title{
+        margin-bottom: 16px;
+    }
+    
+    &__description{
+        margin-bottom: 36px;
+    }
+    &__content{
+        @media screen and (min-width: 746px){
+            width: 40%;
+        }       
+    }
+    
+    &__button{
+        width: 70%;
+        @media screen and (min-width: 746px){
+            width: 80%;
+        }           
+    }    
+}
+/*--- /MEMBER SECTION---*/

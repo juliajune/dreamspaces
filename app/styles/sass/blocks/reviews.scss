@@ -1,28 +1,27 @@
 /*--- REVIEWS---*/
-.reviews{}
-
-.reviews__header{
-    display: flex; 
-    flex-direction: column;     
-}
-
-.reviews__header-left{
-    margin-bottom: 30px;
-}
-
-.reviews__header-right{
-   text-align: center;
-}
-
-.reviews__title{
-    margin-bottom: 56px;
-}
-
-@media screen and (min-width: 576px){
-    .reviews__header{
-        flex-direction: row;
-        justify-content: space-between;           
+.reviews{
+   &__header{
+        display: flex; 
+        flex-direction: column;  
+        @media screen and (min-width: 576px){
+            flex-direction: row;
+            justify-content: space-between;   
+        }   
     }
+    
+   &__header-left{
+        margin-bottom: 30px;
+    }
+    
+   &__header-right{
+       text-align: center;
+    }
+    
+   &__title{
+        margin-bottom: 56px;
+    }
+}
+@media screen and (min-width: 576px){
     .review__header-left{
         flex-basis: 50%;
         text-align: left;
@@ -33,59 +32,51 @@
 }
 /*--- /REVIEWS---*/
 
-/*--- single REVIEW ---*/
+/*--- SINGLE REVIEW ---*/
 .review{
     background-color: var(--color-primary);
     padding: 20px 15px;
     display: flex;
     flex-direction: column;
     height: 100%;
-}
-
-@media screen and (min-width: 992px){
-    .review{
-        padding: 45px 40px 35px 40px;
+    @media screen and (min-width: 992px){
+        padding: 45px 40px 35px 40px;         
+    }
+    &__text{
+        font-family: var(--font-main);
+        font-size: 16px;
+        line-height: 26px; 
+        text-align: center;  
+        flex: 1 1 auto;  
+        @media screen and (min-width: 576px){
+            text-align: left;          
+        } 
+        &_light{
+            color: var(--color-white);  
+        }
+        &_dark{
+            color: var(--color-black);  
+        }
+    }
+    &__author{
+        margin-top: 30px;
     }   
 }
+/*---  /SINGLE REVIEW ---*/
 
-.review__text{
-    font-family: var(--font-main);
-    font-size: 16px;
-    line-height: 26px; 
-    text-align: center;  
-    flex: 1 1 auto;   
-}
-@media screen and (min-width: 576px){
-    .review__text{
-        text-align: left;     
-    }
-}
-.review__text_light{
-    color: var(--color-white);  
-}
-.review__text_dark{
-    color: var(--color-black);  
-}
-
-.review__author{
-    margin-top: 30px;
-}
-
-/*---  /REVIEW ---*/
-
-/*--- REVIEW SLIDER---*/
+/*--- REVIEWS SLIDER---*/
 .reviews-slider{
     height: 350px;
     overflow: hidden;
     position: relative;
-}
-
-
-
-@media screen and (min-width: 1200px){
-    .reviews-slider{
+    @media screen and (min-width: 1200px){
         height: 400px;
         width: 91%;
         margin-left: auto;        
     }
 }
+/*--- /REVIEWS SLIDER---*/
+
+
+
+

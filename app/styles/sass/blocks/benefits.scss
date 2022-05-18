@@ -1,128 +1,116 @@
 /*--- BENEFITS---*/
-.benefits{}
-.benefits__content{
-    display: flex;
-    flex-direction: column;
-    margin: 0 -15px;
-}
-.benefits__col{
-    padding: 15px;
-}
-.benefits__col:first-child{
-    padding-top: 0px;
-    order: 2;   
-}
-.benefits__col:last-child{
-    padding-bottom: 0px; 
-    order: 1;     
-}
-.benefits__body{
-    background-color: var(--color-primary);
-    padding: 20px;
-}
-.benefits__intro{
-    margin-bottom: 8px;
-}
-.benefits__title{
-    margin-bottom: 24px;
-}
-
-
-@media screen and (min-width: 992px){
-    .benefits__content{
-        flex-direction: row;
+.benefits{
+    &__content{
+        display: flex;
+        flex-direction: column;
+        margin: 0 -15px;
+        @media screen and (min-width: 992px){
+            flex-direction: row;
+        }
     }
-    .benefits__col{
-        flex-basis: 50%;
+    &__col{
         padding: 15px;
+        @media screen and (min-width: 992px){
+            flex-basis: 50%;
+            padding: 15px;
+        }
     }
-    .benefits__col:first-child{
+    &__col:first-child{
         padding-top: 0px;
-        order: 1;   
+        order: 2; 
+        @media screen and (min-width: 992px){
+            padding-top: 0px;
+            order: 1; 
+        }
     }
-    .benefits__col:last-child{
-       order: 2;     
+    &__col:last-child{
+        padding-bottom: 0px; 
+        order: 1;  
+        @media screen and (min-width: 992px){
+            order: 2; 
+        }   
     }
-    .benefits__body{
-        padding: 54px;
+    &__body{
+        background-color: var(--color-primary);
+        padding: 20px;
+        @media screen and (min-width: 992px){
+            padding: 54px;
+        }   
+    }
+    &__intro{
+        margin-bottom: 8px;
+    }
+    &__title{
+        margin-bottom: 24px;
     }
 }
+
 /*--- /BENEFITS---*/
 
-/*--- SUPPORT ---*/
+/*--- BENEFITS SUPPORT ---*/
 .support{
     padding: 20px; 
-}
-.support__row{
-    display: flex;
-    flex-direction: column;
-    margin: 0 -10px;
-}
-.support__col{
-    padding: 10px;
-    margin-bottom: 30px;    
-}
-.support__row:last-child > .support__col:last-child{
-    margin-bottom: 0;
-}
-
-@media screen and (min-width: 576px){
-    .support__row{
-        flex-direction: row;
-        flex-wrap: wrap;  
-        margin-bottom: 30px;       
+    @media screen and (min-width: 992px){
+        padding: 40px 10px;      
     }
-    .support__row:last-child{
-        margin-bottom: 0;
+    &__row{
+        display: flex;
+        flex-direction: column;
+        margin: 0 -10px;
+        @media screen and (min-width: 576px){
+            flex-direction: row;
+            flex-wrap: wrap;  
+            margin-bottom: 30px;           
+        }
+    }
+    &__row:last-child{
+        @media screen and (min-width: 576px){
+            margin-bottom: 0;
+        }
     }    
-    .support__col{
-        flex-basis: 50%; 
-        margin-bottom: 0px;     
+    &__col{
+        padding: 10px;
+        margin-bottom: 30px;
+        @media screen and (min-width: 576px){
+            flex-basis: 50%; 
+            margin-bottom: 0px; 
+        }    
     }
-}
-
-@media screen and (min-width: 992px){
-    .support{
-        padding: 40px 10px;       
+    &__row:last-child > &__col:last-child{
+        margin-bottom: 0;
     }
 }
 /*--- /SUPPORT ---*/
 
-/*--- ITEM SUPPORT ---*/
+/*--- BENEFITS SUPPORT ITEM ---*/
 .item-support{
     display: flex;
-    flex-direction: row;    
-}
-
-.item-support__icon{
-    fill: var(--color-primary);
-    margin-right: 24px;  
-    width: 32px;
-    height: 32px; 
-    margin-top: 5px;
-    flex-shrink: 0;   
-}
-
-.item-support__title{
-    font-family: var(--font-text);
-    font-size: 28px;
-    line-height: 32px;
-    color: var(--color-primary);
-    margin-bottom: 8px;
-}
-
-@media screen and (min-width: 992px){
-    .item-support__title{
-        font-size: 32px;
-        line-height: 41px;        
+    flex-direction: row; 
+    &__icon{
+        fill: var(--color-primary);
+        margin-right: 24px;  
+        width: 32px;
+        height: 32px; 
+        margin-top: 5px;
+        flex-shrink: 0;   
+    }  
+    &__title{
+        font-family: var(--font-text);
+        font-size: 28px;
+        line-height: 32px;
+        color: var(--color-primary);
+        margin-bottom: 8px;
+        @media screen and (min-width: 992px){           
+            font-size: 32px;
+            line-height: 41px;             
+        }
     }
+    &__text{
+        font-family: var(--font-main);
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0em;
+        color: var(--color-gray-light);
+    } 
 }
-
-.item-support__text{
-    font-family: var(--font-main);
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0em;
-    color: var(--color-gray-light);
-}
-/*--- /ITEM SUPPORT ---*/
+/*--- /BENEFITS SUPPORT ITEM ---*/

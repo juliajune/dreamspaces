@@ -39,7 +39,11 @@
 		"postcss": "^8.4.12",
 		"sass": "^1.49.9",
 		"terser-webpack-plugin": "^5.3.1",
+		"vanillajs-datepicker": "^1.2.0",
 		"webpack": "^5.70.0",
 		"webpack-stream": "^7.0.0"
+	},
+	"dependencies": {
+		"swiper": "^8.1.4"
 	}
 }

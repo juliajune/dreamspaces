@@ -3,58 +3,53 @@
     background-color: var(--color-primary-dark);
     color: var(--color-white);
     padding: 52px 0px 100px 0px;
-}
-.footer__row{
-    display: flex;
-    flex-direction: column;       
-}
-.footer__col{
-    padding: 20px;
-}
-.footer__col:first-child{
-    padding-top: 0px;
-}
-.footer__col:last-child{
-    padding-bottom: 0px;
-}
-    
-.footer__widget{
-    margin-bottom: 24px;
-}
-.footer__widget:last-child{
-    margin-bottom: 0px;
-}
-    
-@media screen and (min-width: 576px){
-    .footer__row{        
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: 0 -20px;
+    &__row{
+        display: flex;
+        flex-direction: column; 
+        @media screen and (min-width: 576px){                
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 -20px;           
+        }
+        @media screen and (min-width: 1024px){
+            margin: 0 -15px;            
+        }      
     }
-    .footer__col{
-        flex-basis: 50%;
+    &__col{
         padding: 20px;
-    }
-    .footer__col:first-child{
-        flex-basis: 100%;
-        padding-top: 20px;
-    }
-    .footer__col:nth-last-child(-n+2){
-        padding-bottom: 0px;	
-    }            
-}
-
-@media screen and (min-width: 1024px){
-    .footer__row{  
-        margin: 0 -15px;
-    }
-    .footer__col{
-        flex-basis: 18%;
-        padding: 0 15px;          
-    }
-    .footer__col:first-child{
-        flex-basis: 28%;        
-        padding-top: 0;
-    }
+        @media screen and (min-width: 576px){           
+            flex-basis: 50%;
+            padding: 20px;                
+        }
+        @media screen and (min-width: 1024px){          
+            flex-basis: 18%;
+            padding: 0 15px;           
+        }
+        &:first-child{
+            padding-top: 0px;
+            @media screen and (min-width: 576px){            
+                flex-basis: 100%;
+                padding-top: 20px;                 
+            }
+            @media screen and (min-width: 1024px){              
+                flex-basis: 28%;        
+                padding-top: 0;               
+            }
+        }
+        &:last-child{
+            padding-bottom: 0px;
+        }
+        &:nth-last-child(-n+2){
+            @media screen and (min-width: 576px){
+                padding-bottom: 0px;                     
+            }	
+        }      
+    }       
+    &__widget{
+        margin-bottom: 24px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }    
 }
 /*--- FOOTER ---*/

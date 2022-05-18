@@ -1,0 +1,31 @@
+/*--- SOCIAL LIST ---*/
+.social{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -9px;
+    &__item:not(:last-child){
+        padding: 2px 9px;
+    }
+    
+    &__link{
+        display: inline-block;
+        color: var(--color-white);
+        svg{
+            fill: var(--color-white);
+            transition: var(--transition-time);
+            width: 20px;
+            height: 20px;
+        }      
+        &:hover{
+            display: inline-block;
+            color: var(--color-secondary-light); 
+            svg{
+                fill: var(--color-secondary-light);
+                transition: var(--transition-time);
+            }                    
+        }                         
+    }
+}
+/*--- /SOCIAL LIST ---*/

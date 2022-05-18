@@ -28,12 +28,7 @@
     .my-navigation-buttons .my-button-prev{
         margin-right: 20px;
     }
-    /*
-    @media screen and (min-width: 992px){
-        .my-navigation-buttons{        
-            justify-content: end;
-        }
-    }*/
+    
     /* Swiper buttons wrap */
     /* Swiper Next button*/
     .my-button-next{
@@ -47,7 +42,7 @@
     }
    
     .my-button-next:after{
-        content: url(../images/arrow-right-orange.svg);
+        content: url(../images/dist/arrow-right-orange.svg);
         position: absolute;
         display: block;
         width: 92px;
@@ -58,7 +53,7 @@
     }
 
     .swiper-button-disabled.my-button-next:after{
-        content: url(../images/arrow-right-gray.svg);
+        content: url(../images/dist/arrow-right-gray.svg);
         width: 52px;
         height: 26px;
     }
@@ -79,7 +74,7 @@
     }
 
     .my-button-prev:after{
-        content: url(../images/arrow-left-orange.svg);
+        content: url(../images/dist/arrow-left-orange.svg);
         position: absolute;
         display: block;
         width: 92px;
@@ -89,7 +84,7 @@
         transform: translateY(-50%);
     }
     .swiper-button-disabled.my-button-prev:after{
-        content: url(../images/arrow-left-gray.svg);
+        content: url(../images/dist/arrow-left-gray.svg);
         width: 52px;
         height: 26px;
     }
@@ -134,17 +129,7 @@
 
 
     /*--- SWIPER scrollbar ---*/
-    .swiper-horizontal>.swiper-scrollbar{
-        /*width: 160px;*/
-        /*margin: 10px auto 25px auto;*/
-        /*position: static;   */ 
-    }
-    @media screen and (min-width: 1024px){
-        .swiper-horizontal>.swiper-scrollbar{
-            /*margin: 53px auto 7px auto;  */       
-        }
-    }
-
+    
     .swiper-scrollbar {
         border-radius: 0px;
         background-color: var(--color-gray-middle);
@@ -155,56 +140,3 @@
         border-radius: 0px;    
     }
     /*--- /SWIPER scrollbar ---*/
-
-
-
-
-
-
-   /*
-    .slider__pagination{
-        height: 50px;
-    }  
-  */    
- 
- /*-------------------------------------------------------*/
- /*
-.swiper {
-    width: 600px;
-    height: 300px;
-    padding: 20px 0px;
-}
-*/
-
-/*
-.swiper{
-    height: 393px;
-    margin-bottom: 32px;
-}
-
-.swiper-pagination{
-   
-}
-
-.slider__pagination{
-    width: 160px;
-    margin: 0 auto;
-}
-
-.spaces-slider{
-    
-    overflow: hidden;
-    padding: 0px 5px 30px 5px;
-    
-    
-}
-
-/*Отключаем изображения стрелок из дефолтного слайдера*/
-/*
-.swiper-button-prev:after, .swiper-button-next:after{
-    content: '';
-}
-
-*/
-
-

@@ -1,10 +1,13 @@
 /*---  OUR FACITILIES ---*/
-
-@media screen and (min-width: 992px){
-    .facitilies__header{
-        width: 50%;
+.facitilies{
+    &__header{
+        @media screen and (min-width: 992px){
+            width: 50%;          
+        }
     }
+
 }
+
 /*-- SLIDERS --*/
 .facitilies-slider{
     display: -webkit-box;
@@ -159,7 +162,7 @@
         left: 6px;
         top: 0;
         z-index: 50;
-        width: 5px;
+        //width: 5px;
         height: 160px;  
         background-color: rgba(0,0,0,.1);     
     }
@@ -182,11 +185,11 @@
         transition: .3s opacity;
         -webkit-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
-        z-index: 10;    
-        height: 100%;
-        width: 20px;
-        bottom: 0px;
+        z-index: 10;        
+        width: 20px;        
         left: 3px;
+        height: 40px;
+        top: 40%;
     }
 
     .facitilies-slider__text .swiper-pagination-fraction {
@@ -196,6 +199,7 @@
         -webkit-transform: rotate(-180deg);
         -ms-transform: rotate(-180deg);
         transform: rotate(-180deg);
+        
     }
     
 }/*media*/

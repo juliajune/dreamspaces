@@ -1,0 +1,15 @@
+/*--- LOGO ---*/
+.logo{
+    display: block;
+    font-family:var(--font-logo);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--color-primary);
+    &__img{
+        width: 90px;
+        height: 32px;
+        display: block;
+    }    
+ }
+ /*--- /LOGO ---*/
