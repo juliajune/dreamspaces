@@ -27,8 +27,16 @@
             cursor: default;
         }
     }
-    &__login-link{
-        margin-right: 24px;
+    &__login-link{        
+        @media screen and (min-width: 576px){  
+            margin-right: 10px; 
+        }    
+    }
+    &__sing-up{
+        display: none;
+        @media screen and (min-width: 576px){  
+            display: inline-block;
+        }    
     }
 }//header
 
